@@ -30,3 +30,17 @@ export function createPost(postData) {
       );
   };
 }
+
+export function removePost(postId) {
+  return function(dispatch) {
+    
+        dispatch({
+          type: "REMOVE_POST",
+          id: postId
+
+        })
+      
+  };
+}
+
+
