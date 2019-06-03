@@ -17,11 +17,20 @@ export default function(state = initialState, action) {
         items: action.payload
       };
     case NEW_POST:
+      console.log(state);
+      console.log(action);
 
-        return {
-          ...state,
-          item: action.payload
-        };
+      //Destructure the incoming data
+      const {title, body} = action.payload;
+      const newItem = {
+        title,
+        body
+      }
+      
+      return {
+        ...state,
+        items: [newItem,...state.items ]
+      };
 
     default:
       return state;

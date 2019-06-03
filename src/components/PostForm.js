@@ -14,8 +14,8 @@ import {createPost} from '../actions/postActions';
 
   onChange = e => {
     const { name, value } = e.target;
-    console.log(e.target.name);
-    console.log(e.target.value);
+    // console.log(e.target.name);
+    // console.log(e.target.value);
 
     this.setState({
       [name]: value
