@@ -1,4 +1,5 @@
 import { FETCH_POSTS, NEW_POST } from "../actions/types";
+import uuid from "uuid";
 
 const initialState = {
   items: [],
@@ -23,6 +24,7 @@ export default function(state = initialState, action) {
       //Destructure the incoming data
       const {title, body} = action.payload;
       const newItem = {
+        id: uuid.v4(),
         title,
         body
       }
